@@ -1,3 +1,5 @@
+## (GRS 프로젝트 - LCD화면 웹)
+
 ## AWS ec2 django-channels 배포
 
 ### EC2 setting
@@ -27,7 +29,7 @@
 
 9. pyenv 설치
 
-   1. curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+   1. `curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash`
 
    2. `vi ~/.bashrc`
 
@@ -51,9 +53,9 @@
 
     1. `git clone 레포지토리.git`
     2. `cd 파일명`
-    3. `pyenv install 3.7.0` 설정한 파이썬 버전 설치
-    4. `pyenv virtualenv 3.7.0` 가상환경명
-    5. `pyenv  local 가상환경명
+    3. `pyenv install 3.7.0` 장고실행시 파이썬 버전 설치
+    4. `pyenv virtualenv 3.7.0 가상환경명` 
+    5. `pyenv  local 가상환경명`
     6. `pip install -r requriements.txt`
 
 13. redis-server 설치 및 실행
