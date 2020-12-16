@@ -48,14 +48,14 @@
             console.log(data.message)
             if (data.message === "1") {
                 var imgSrc= document.targetimg;
-                imgSrc.src="https://employee-info-photo.s3.amazonaws.com/employee_photo/zzerii.jpg"
+                imgSrc.src="https://grs-img.s3.amazonaws.com/output/neck.jpg"
                 setTimeout(function erase_textarea(){
                     imgSrc.src="";
                     document.querySelector('#chat-log').value = ""
                 }, 10000);
             }else if(data.message === "2"){
                 var imgSrc= document.targetimg;
-                imgSrc.src="https://employee-img-grs.s3.ap-northeast-2.amazonaws.com/employee_img/zzang.jpg"
+                imgSrc.src="https://grs-img.s3.amazonaws.com/output/123.gif"
                 setTimeout(function erase_textarea(){
                     imgSrc.src="";
                     document.querySelector('#chat-log').value = ""
