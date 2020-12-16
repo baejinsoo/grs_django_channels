@@ -15,13 +15,13 @@ class User(models.Model):
     user_id = models.IntegerField()
     user_name = models.CharField(max_length=100)
     user_email = models.CharField(max_length=100)
-    thumbnail = models.CharField(max_length=100, null=True)
-    # thumbnail = models.ImageField(upload_to='images/',blank=True, null=True)
+    thumbnail = models.CharField(max_length=100, null=True, blank=True)
+    user_pic = models.ImageField(upload_to='',blank=True, null=True)
     user_rank = models.CharField(choices=TAG_CHOICES, max_length=100)
     birth = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.user_id
+        return str(self.user_id)
 
 class photo(models.Model):
     img_name = models.CharField(max_length=100)
