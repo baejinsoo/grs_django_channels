@@ -12,6 +12,7 @@
         {
             display: table;
             margin: 0 auto;
+            background: black;
         }
         
         .container
@@ -23,12 +24,14 @@
     </style>
     <title style="color: antiquewhite; font-size: 50px;" >Chat Room</title>
 </head>
-<body style="background: black;">
+<body>
     <div class="container" style="color: antiquewhite; font-size: 50px; ">
-        <img name="targetimg" src='' height="auto" width="auto" style="background: black; display: block;margin: auto;">
-        <textarea id="chat-log" size="10" style="font-size: 100px; color: antiquewhite; background: black;"></textarea><br>
-        <input id="chat-message-input" type="text" size="100">
-        <input id="chat-message-submit" type="button" value="Send">
+        <div class="img-wrapper" style="width:25%; overflow: hidden; position: relative; display: block;margin: auto;">
+            <img name="targetimg" src='' height="auto" width="auto" style="background: black; max-width: 100%; height: auto;">
+        </div>
+        <textarea id="chat-log" size="10" style="font-size: 60px; color: antiquewhite; background: black; max-width: 100%; height: auto;"></textarea><br>
+        <input id="chat-message-input" type="text" size="80">
+        <input id="chat-message-submit" type="button" value="Send"><br>
     </div>
     {{ room_name|json_script:"room-name" }}
     <script>
