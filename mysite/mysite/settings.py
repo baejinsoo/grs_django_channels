@@ -93,8 +93,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'grs', 
         'USER': 'grs', 
-        'PASSWORD': 'grs1234!',
-        'HOST': 'grs-js.cjidgocmm9f1.us-east-1.rds.amazonaws.com',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '3306'
         }
 }
