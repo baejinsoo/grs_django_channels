@@ -20,19 +20,38 @@
             height: 100%;
             display: table-cell;
             vertical-align: middle;
+            color: antiquewhite; 
+            font-size: 50px;
+            text-align: center;
+        }
+        #chat-log{
+            font-size: 60px;
+            background: black; 
+            max-width: 100%; 
+            max-height:80px; 
+            height: auto; 
+            border: 3px #ffd000 solid; 
+            border-radius: 10px;
+            color: white;
         }
     </style>
-    <title style="color: antiquewhite; font-size: 50px;" >Chat Room</title>
+    <title>Chat Room</title>
 </head>
 <body>
-    <div class="container" style="color: antiquewhite; font-size: 50px; ">
-        <div class="img-wrapper" style="width:25%; overflow: hidden; position: relative; display: block;margin: auto;">
+    <div class="container" >
+        <div class="img-wrapper" style="width:70%; overflow: hidden; position: relative; display: block;margin: auto;">
             <img name="targetimg" src='' height="auto" width="auto" style="background: black; max-width: 100%; height: auto;">
         </div>
-        <textarea id="chat-log" size="10" style="font-size: 60px; color: antiquewhite; background: black; max-width: 100%; height: auto;"></textarea><br>
-        <input id="chat-message-input" type="text" size="80">
-        <input id="chat-message-submit" type="button" value="Send"><br>
+        <textarea id="chat-log" size="10" ></textarea><br>
+        <!-- <input id="chat-message-input" type="text" size="80">
+        <input id="chat-message-submit" type="button" value="Send"><br> -->
+        <div style="width:25%; overflow: hidden; position: relative; display: block;margin: auto;">
+            <a href="{% url 'eye_exercise' %}"> <img src="https://employee-img-grs.s3.ap-northeast-2.amazonaws.com/grs_django/eye_exercise.png" height="auto" width="auto" style="background: black; max-width: 40%; height: auto;"></a>
+            <a href="{% url 'stretching' %}"> <img src="https://employee-img-grs.s3.ap-northeast-2.amazonaws.com/grs_django/stretching.png" height="auto" width="auto" style="background: black; max-width: 40%; height: auto;"></a>
+        </div>
     </div>
+
+    
     {{ room_name|json_script:"room-name" }}
     <script>
         const roomName = JSON.parse(document.getElementById('room-name').textContent);
@@ -51,14 +70,14 @@
             console.log(data.message)
             if (data.message === "1") {
                 var imgSrc= document.targetimg;
-                imgSrc.src="https://grs-img.s3.amazonaws.com/output/neck.jpg"
+                imgSrc.src="https://employee-img-grs.s3.ap-northeast-2.amazonaws.com/grs_django/neck.gif"
                 setTimeout(function erase_textarea(){
                     imgSrc.src="";
                     document.querySelector('#chat-log').value = ""
                 }, 10000);
             }else if(data.message === "2"){
                 var imgSrc= document.targetimg;
-                imgSrc.src="https://grs-img.s3.amazonaws.com/output/123.gif"
+                imgSrc.src="https://employee-img-grs.s3.ap-northeast-2.amazonaws.com/grs_django/eyeblink.gif"
                 setTimeout(function erase_textarea(){
                     imgSrc.src="";
                     document.querySelector('#chat-log').value = ""

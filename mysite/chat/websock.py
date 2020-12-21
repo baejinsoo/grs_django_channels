@@ -3,7 +3,7 @@ import json
 
 
 ws = websocket.WebSocket()
-ws.connect("ws://52.73.45.94:8000/ws/chat/1234/")
+ws.connect("ws://127.0.0.1:8000/ws/chat/12368/")
 
-pp=json.dumps({'message':"hello"})
+pp=json.dumps({'message':"2"})
 ws.send(pp)

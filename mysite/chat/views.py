@@ -13,6 +13,12 @@ def room(request, room_name):
         'room_name': room_name
     })
 
+def eye_exercise(request):
+    return render(request, 'chat/eye_exercise.html')
+
+def stretching(request):
+    return render(request, 'chat/stretching.html')
+
 
 def register(request):
     if request.method == "POST":

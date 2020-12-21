@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        html, body
+        {
+            height: 100%;
+        }
+        
+        body
+        {
+            display: table;
+            margin: 0 auto;
+            background: black;
+        }
+        
+        .container
+        {
+            height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            color: antiquewhite; 
+            font-size: 50px;
+            text-align: center;
+        }
+        #chat-log{
+            font-size: 60px;
+            background: black; 
+            max-width: 100%; 
+            max-height:80px; 
+            height: auto; 
+            border: 3px #ffd000 solid; 
+            border-radius: 10px;
+        }
+    </style>
+    <title>Chat Room</title>
+</head>
+<body>
+    <div class="container" >
+        
+        <video name='demo' controls autoplay width='50%' height='40%'>
+            <source src="https://django-ui-video.s3.amazonaws.com/video/eye_exer.mp4" type="video/mp4"></source>
+        </video>
+        <input type="button" value="BACK" onClick="history.go(-1)"> 
+    </div>
+</body>
+</html>

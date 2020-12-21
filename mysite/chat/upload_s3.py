@@ -15,7 +15,3 @@ def handle_upload_file(f):
         config=Config(signature_version='s3v4')
         )
     s3.Bucket(BUCKET_NAME).put_object(Key=f,Body=data,ContentType='image/jpg')
-
-# img_1 = "jinsoo.jpg"
-# print(img_1, type(img_1))
-# handle_upload_file(img_1)
